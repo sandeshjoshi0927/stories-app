@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -7,7 +7,12 @@ const routes = [
     path: "/",
     element: <Layout />,
     errorElement: <NotFoundPage />,
-    children: [],
+    children: [
+      {
+        path: "/stories",
+        element: <Outlet />,
+      },
+    ],
   },
 ];
 
