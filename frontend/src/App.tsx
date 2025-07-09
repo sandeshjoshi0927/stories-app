@@ -12,6 +12,10 @@ const routes = [
         path: "/stories",
         element: <Outlet />,
       },
+      {
+        path: "/addstory",
+        element: <Outlet />,
+      },
     ],
   },
 ];
