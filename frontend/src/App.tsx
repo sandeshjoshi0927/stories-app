@@ -1,6 +1,8 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import NotFoundPage from "./pages/NotFoundPage";
+import { HomePage } from "./pages/HomePage";
+import { StoryListPage } from "./pages/StoryListPage";
 
 const routes = [
   {
@@ -9,12 +11,12 @@ const routes = [
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "/stories",
-        element: <Outlet />,
+        path: "/",
+        element: <HomePage />,
       },
       {
-        path: "/addstory",
-        element: <Outlet />,
+        path: "/stories",
+        element: <StoryListPage />,
       },
     ],
   },
