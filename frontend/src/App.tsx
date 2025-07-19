@@ -3,6 +3,7 @@ import Layout from "./layouts/Layout";
 import NotFoundPage from "./pages/NotFoundPage";
 import { HomePage } from "./pages/HomePage";
 import { StoryListPage } from "./pages/StoryListPage";
+import StoryPage from "./pages/StoryPage";
 
 const routes = [
   {
@@ -17,6 +18,10 @@ const routes = [
       {
         path: "/stories",
         element: <StoryListPage />,
+      },
+      {
+        path: "/stories/:name",
+        element: <StoryPage />,
       },
     ],
   },
